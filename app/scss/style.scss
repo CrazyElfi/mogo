@@ -14,7 +14,7 @@ html {
   box-sizing: inherit;
 }
 
-h1, h2, h3.h4.h5.h6 {
+h1, h2, h3, h4,h5, h6, div {
   margin: 0;
   padding: 0;
 }
@@ -26,6 +26,7 @@ body {
   font-weight: 400;
   color: #333;
 }
+
 
 a {
   list-style: none;
@@ -43,8 +44,9 @@ hr {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1230px;
   width: 100%;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -238,11 +240,13 @@ hr {
   }
 
   .card {
-    margin-top: 80px;
+    margin: 80px -15px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     &__item {
-      width: 380px;
+      width: 33.33333%;
+      padding: 0 15px;
       &:hover .card__text {
         opacity: 1;
       }
@@ -262,6 +266,8 @@ hr {
       transition: trasform .2s linear;
       img {
         display: block;
+        max-width: 100%;
+        height: auto;
         transition: opacity .1s linear;
       }
     }
@@ -343,6 +349,7 @@ hr {
   color: #fff;
   .stat {
     display: flex;
+    flex-wrap: wrap;
     &__item {
       flex: 1 1 0;
       padding: 70px 25px;
@@ -368,12 +375,16 @@ hr {
 
 .services {
   display: flex;
+  flex-wrap: wrap;
   color: #333;
   &__item {
-    flex:  1 1 0;
-    padding-left: 85px;
-    padding-right: 35px;
+    width: 33.33333%;
+    padding: 0 35px 40px 85px;
     position: relative;
+    margin-bottom: 40px;
+    &--border {
+      border-bottom: 1px solid #e5e5e5;
+    }
   }
   &__icon {
     position: absolute;
@@ -411,8 +422,16 @@ hr {
 
 .service {
   display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
   &__item {
     width: 50%;
+    padding: 0 15px;
+    &-img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
   }
   .accordion {
     &__item {
@@ -502,6 +521,9 @@ hr {
     position: relative;
   }
   &__img {
+    width: 210px;
+    height: 210px;
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
@@ -563,6 +585,15 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 -15px;
+  &__item {
+    padding: 0 15px;
+  }
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .works {
@@ -673,6 +704,7 @@ hr {
 .blog {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   &__item {
     width: 31%;
   }
@@ -772,9 +804,12 @@ hr {
   &__inner {
     padding-bottom: 65px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 -15px;
   }
   &__col {
+    padding: 0 15px;
     &--first {
       width: 40%;
     }
@@ -853,6 +888,7 @@ hr {
   width: 100%;
   max-width: 380px;
   display: flex;
+  flex-wrap: wrap;
   &__input {
     width: 60%;
     background-color: #fff;
@@ -935,10 +971,12 @@ hr {
   flex-wrap: wrap;
   justify-content: space-between;
   &__item {
-    width: 32.33333%;
+    width: 33%;
     border-bottom: 1px solid #fff;
     img {
       display: block;
+      max-width: 100%;
+      height: auto;
     }
   }
 }
