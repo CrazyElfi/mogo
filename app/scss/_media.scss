@@ -87,8 +87,31 @@
 }
 
 @media (max-width: 770px) {
-  .nav {
-    display: none;
+  .header {
+    padding: 10px 0;
+    .nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #e98483;
+      &.active {
+        display: block;
+      }
+      &__link {
+        display: block;
+        margin: 0;
+        padding: 8px 20px;
+      }
+      &-toggle {
+        display: block;
+      }
+    }
+  }
+
+  .intro {
+    min-height: 650px;
   }
 
   .section {
@@ -198,11 +221,14 @@
 }
 
 @media (max-width: 575px) {
-  .intro__title {
-    font-size: 36px;
-  }
-  .intro__suptitle {
-    font-size: 22px;
+
+  .intro{
+    &__title {
+      font-size: 36px;
+    }
+    &__suptitle {
+      font-size: 22px;
+    }
   }
 
   .section {
