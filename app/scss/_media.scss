@@ -47,7 +47,9 @@
     }
   }
   .reviews {
-    padding: 0 60px;
+    & .slick-slider {
+      padding: 0 60px;
+    }
     &__item {
       padding-left: 175px;
     }
@@ -274,8 +276,10 @@
     }
   }
   .reviews {
-    padding: 0;
-    &__btn {
+    & .slick-slider {
+      padding: 0;
+    }
+    & .slick-arrow {
       top: 25%;
     }
     &__img {

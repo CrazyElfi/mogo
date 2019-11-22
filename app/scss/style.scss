@@ -564,35 +564,14 @@ hr {
 }
 
 .reviews {
-  padding: 0 110px;
   position: relative;
-  &__btn {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    transform: translateY(-50%);
-    font-size: 0;
-    color: transparent;
-    &::after {
-      content: '';
-      display: block;
-      width: 16px;
-      height: 16px;
-      border-left: 3px solid #ccc;
-      border-top: 3px solid #ccc;
-    }
-    &--prev {
-      left: 0;
-      transform: rotate(-45deg);
-    }
-    &--next {
-      right: 0;
-      transform: rotate(135deg);
-    }
+  & .slick-slider {
+    padding: 0 110px;
   }
   &__item {
     padding-left: 255px;
     position: relative;
+    min-height: 210px;
   }
   &__img {
     width: 210px;
@@ -1056,10 +1035,42 @@ hr {
 }
 
 
+/* Slider */
 
+.slick-arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+  font-size: 0;
+  color: transparent;
+  border: 0;
+  background: none;
+  cursor: pointer;
 
+  &::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-left: 3px solid #ccc;
+    border-top: 3px solid #ccc;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.slick-prev {
+    left: 0;
+    transform: rotate(-45deg);
+  }
 
-
+  &.slick-next {
+    right: 0;
+    transform: rotate(135deg);
+    z-index: 10;
+  }
+}
 
 
 

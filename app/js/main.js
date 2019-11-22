@@ -63,7 +63,7 @@ $(function(){
     /* Slider for block Reviews 1  */
     $("[data-slider]").slick({
         infinite: true,
-        fade: true,
+        fade: false,
         slidesToShow: 1,
         slidesToScroll: 1
     });
